@@ -10,7 +10,7 @@ Le but de ce montage, c'est de remplacer une horloge évoluée placée dans le s
 comme la t° extérieure ou le nombre de mails reçus.
 
 
-Actuellement, celle-ci utilise une link:interface_serial_i2c.html[interface personnel i2c] avec un link:circuit_saa1064.html[afficheur i2c (SAA1064)] 4 digits 7 segments. 
+Actuellement, celle-ci utilise une interface personnel i2c avec un afficheur i2c (SAA1064) 4 digits 7 segments. 
 Cette interface est pilotée par une machine Linux.
 
 
@@ -24,7 +24,7 @@ Matériel utilisé:
 * Circuits d'entrée/sortie 3x PCF8574 pilotant 4 afficheurs 4 digits 16+1 segments.
 * Afficheur 16 segments + 1 à anode commune.
  
-image::../images/digit_16_segment_led_display.jpg[caption="", title="", alt="", width="200", link="../images/digit_16_segment_led_display.jpg"]   
+image::images/digit_16_segment_led_display.jpg[caption="", title="", alt="", width="200", link="images/digit_16_segment_led_display.jpg"]   
 
 ---------------------------------------------------------------------------------------------------
                 +-------+                 a   b
@@ -57,7 +57,7 @@ Cablâge sur les ports des PCF8574:
 
 == Principe de fonctionnement ==
 
-image::../images/xpl_aff4d16_ph11.jpg[caption="Vue du montage en test", title="", alt="", width="200", link="../images/xpl_aff4d16_ph11.jpg"]  
+image::images/xpl_aff4d16_ph11.jpg[caption="Vue du montage en test", title="", alt="", width="200", link="images/xpl_aff4d16_ph11.jpg"]  
 
 
 * L'Arduino + l'Ethernet-Schield relié au réseau affiche l'heure et périodiquement affiche la t° intérieure / extérieure reçues par http://[messages xPL] sensor.basic.
@@ -79,7 +79,7 @@ Ports de l'Arduino utilisés:
 Après les tests, l'Arduino + l'Ethernet-Schield ont été remplacé par L'http://www.sparkfun.com/products/10536[Arduino Ethernet Pro] de chez SparkFun. 
 Un Arduino avec chip ethernet W5100 intégré à la carte.
 
-image::../images/arduino_ethernet_pro.jpg[caption="Arduino Ethernet Pro", title="", alt="", width="300", link="../images/arduino_ethernet_pro.jpg"]  
+image::images/arduino_ethernet_pro.jpg[caption="Arduino Ethernet Pro", title="", alt="", width="300", link="images/arduino_ethernet_pro.jpg"]  
 
 
 
@@ -106,8 +106,8 @@ Si la t° enregistrée est trop ancienne, un affichage spécifique est affiché 
 qu'il n'y a plus de réception de la donnée par xPL.
 
 		
-* Programme en 4 sketchs (link:../images/xpl_aff4d16.tgz[xpl_aff4d16.tgz]):  _xpl_aff4d16.pde_, _app.pde_, _display16seg.pde_, _xpl.pde_.
-* Librairie PCF8583 légèrement modifiée pour retourner un code retour à l'init. (link:../images/pcf8583.tgz[pcf8583.tgz]).
+* Programme en 4 sketchs (link:images/xpl_aff4d16.tgz[xpl_aff4d16.tgz]):  _xpl_aff4d16.pde_, _app.pde_, _display16seg.pde_, _xpl.pde_.
+* Librairie PCF8583 légèrement modifiée pour retourner un code retour à l'init. (link:images/pcf8583.tgz[pcf8583.tgz]).
 
 
 === Messages xPL de test (xpl-sender fait partie de la https://github.com/beanz/xpl-perl/[libxpl-perl]):
@@ -131,15 +131,15 @@ qu'il n'y a plus de réception de la donnée par xPL.
 
 === Shéma
 
-image::../images/xpl_aff4d16.jpg[caption="", title="", alt="", width="800", link="../images/xpl_aff4d16.jpg"]  
+image::images/xpl_aff4d16.jpg[caption="", title="", alt="", width="800", link="images/xpl_aff4d16.jpg"]  
 
 
 === Photos
 
 [cols="^,^",]
 |=======================================================================
-|image:../images/xpl_aff4d16_ph1.jpg[caption="Vue du montage avec affichage de l'heure", title="Vue du montage avec affichage de l'heure", alt="", width="500", link="../images/xpl_aff4d16_ph1.jpg"]
-|image:../images/xpl_aff4d16_ph2.jpg[caption="Vue du montage avec affichage de la température", title="Vue du montage avec affichage de la température", alt="", width="500", link="../images/xpl_aff4d16_ph2.jpg"]
+|image:images/xpl_aff4d16_ph1.jpg[caption="Vue du montage avec affichage de l'heure", title="Vue du montage avec affichage de l'heure", alt="", width="500", link="images/xpl_aff4d16_ph1.jpg"]
+|image:images/xpl_aff4d16_ph2.jpg[caption="Vue du montage avec affichage de la température", title="Vue du montage avec affichage de la température", alt="", width="500", link="images/xpl_aff4d16_ph2.jpg"]
 |=======================================================================
 
 
